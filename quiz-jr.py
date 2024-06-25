@@ -6,16 +6,16 @@ print("-"*60)
 print("{:^60}".format("QUIZ JÚNIOR"))
 print("-"*60)
 
-# nome = input("Qual o seu nome? ")
-# print(f"Olá, {nome}!")
-# resposta = input("Gostaria de iniciar o jogo? (S/N) ")
-# resposta = resposta.upper()
-# if resposta != "S":
-#     print("Ok. Até a próxima!")
-#     quit()
-    
-# print("Iniciando...")
-# sleep(1)
+nome = input("Qual o seu nome? ")
+print(f"Olá, {nome}!")
+resposta = input("Gostaria de iniciar o jogo? (S/N) ")
+resposta = resposta.upper()
+if resposta != "S":
+    print("Ok. Até a próxima!")
+    quit()
+pontos = 0
+print("Iniciando...")
+sleep(1)
 
 #Perguntas
 print("-"*15)
@@ -37,6 +37,7 @@ sleep(0.5)
 
 if r1 == "d":
     print("\033[32mResposta Correta!\033[m")
+    pontos += 1
 else:
     print("\033[31mResposta Incorreta!\033[m")
     
@@ -59,6 +60,7 @@ sleep(0.5)
 
 if r1 == "b":
     print("\033[32mResposta Correta!\033[m")
+    pontos += 1
 else:
     print("\033[31mResposta Incorreta!\033[m")
 
@@ -81,6 +83,7 @@ sleep(0.5)
 
 if r1 == "c":
     print("\033[32mResposta Correta!\033[m")
+    pontos += 1
 else:
     print("\033[31mResposta Incorreta!\033[m")
 
@@ -103,6 +106,7 @@ sleep(0.5)
 
 if r1 == "a":
     print("\033[32mResposta Correta!\033[m")
+    pontos += 1
 else:
     print("\033[31mResposta Incorreta!\033[m")
 
@@ -125,6 +129,7 @@ sleep(0.5)
 
 if r1 == "b":
     print("\033[32mResposta Correta!\033[m")
+    pontos += 1
 else:
     print("\033[31mResposta Incorreta!\033[m")
 
@@ -147,6 +152,7 @@ sleep(0.5)
 
 if r1 == "b":
     print("\033[32mResposta Correta!\033[m")
+    pontos += 1
 else:
     print("\033[31mResposta Incorreta!\033[m")
 
@@ -169,6 +175,7 @@ sleep(0.5)
 
 if r1 == "d":
     print("\033[32mResposta Correta!\033[m")
+    pontos += 1
 else:
     print("\033[31mResposta Incorreta!\033[m")
 
@@ -191,6 +198,7 @@ sleep(0.5)
 
 if r1 == "a":
     print("\033[32mResposta Correta!\033[m")
+    pontos += 1
 else:
     print("\033[31mResposta Incorreta!\033[m")
 
@@ -213,6 +221,7 @@ sleep(0.5)
 
 if r1 == "c":
     print("\033[32mResposta Correta!\033[m")
+    pontos += 1
 else:
     print("\033[31mResposta Incorreta!\033[m")
 
@@ -235,6 +244,24 @@ sleep(0.5)
 
 if r1 == "a":
     print("\033[32mResposta Correta!\033[m")
+    pontos += 1
 else:
     print("\033[31mResposta Incorreta!\033[m")
 
+sleep(1)
+print("-"*60)
+print("{:^60}".format("FIM DO QUIZ"))
+print("-"*60)
+
+if pontos > 7:
+    print(f"Parabéns, {nome}! Você acertou \033[32m{pontos} de 10\033[m perguntas.")
+elif pontos > 4:
+    print(f"Muito bem, {nome}! Você acertou \033[36m{pontos} de 10\033[m perguntas.")
+elif pontos > 1:
+    print(f"Você pode melhorar, {nome}! Você acertou apenas \033[33m{pontos} de 10\033[m perguntas.")
+else:
+    print(f"Você foi muito mal, {nome}! Você acertou só \033[31m{pontos} de 10\033[m perguntas. :(")
+    
+
+print("Até a próxima!")
+print("-"*60)
